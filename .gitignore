@@ -78,3 +78,14 @@ sample.txt
 server.js
 tmp/
 views/
+!/sample.txt
+!/router.js
+!/requestHandlers.js
+!/package.json
+!/output.txt
+!/node.js
+!/server.js
+!/index.js
+!/Handerbars.iml
+!/outputSync.txt
+!/favicon.ico

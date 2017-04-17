@@ -10,15 +10,15 @@ function start(route, handle) {
         // 然后服务器接受了客户端发送的数据，每次访问时，就是一次请求的送达，返回的信息用 response 来处理
 
         console.log("Request for " + pathname + " received.");
-        request.setEncoding('utf-8')
+        request.setEncoding('utf8');
+        // request.decodeURIComponent('utf8')
         request.addListener('data',function (postDataChunk) {
             postData += postDataChunk
-
-        })
+        });
         request.addListener('end',function () {
             route(handle, pathname, response, postData)
         })
-        route(handle, pathname, response)
+        // route(handle, pathname, response)
     }
     http.createServer(onRequest).listen(8888);
     console.log("Server has started.");
